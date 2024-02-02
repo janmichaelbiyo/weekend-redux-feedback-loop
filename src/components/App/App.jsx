@@ -1,8 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 import Feeling from '../Feeling/Feeling';
+import Understading from '../Understanding/Understanding';
+import Support from '../Support/Support';
+import Comment from '../Comment/Comment';
 
 function App() {
   return (
@@ -11,7 +15,23 @@ function App() {
         <h1 className="App-title">Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-      <Feeling />
+      <Router>
+        <Route path="/" exact>
+          <Feeling />
+        </Route>
+
+        <Route path="/understanding">
+          <Understading />
+        </Route>
+
+        <Route path="/support">
+          <Support />
+        </Route>
+
+        <Route path="/comment">
+          <Comment />
+        </Route>
+      </Router>
     </div>
   );
 }
