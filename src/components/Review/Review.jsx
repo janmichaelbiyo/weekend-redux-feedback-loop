@@ -1,4 +1,11 @@
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 function Review() {
+  const history = useHistory();
+  const handleNavtoSubmission = () => {
+    history.push('/submission');
+  };
   return (
     <div>
       <h1>Review Your Feedback</h1>
@@ -7,7 +14,7 @@ function Review() {
         <li>Understanding:</li>
         <li>Support:</li>
         <li>Comments:</li>
-        <button>SUBMIT</button>
+        <button onClick={handleNavtoSubmission}>SUBMIT</button>
       </ul>
     </div>
   );

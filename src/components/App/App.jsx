@@ -8,6 +8,7 @@ import Understading from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
+import Submission from '../Submission/Submission';
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
 
         <Route path="/review">
           <Review />
+        </Route>
+
+        <Route path="/submission">
+          <Submission />
         </Route>
       </Router>
     </div>
