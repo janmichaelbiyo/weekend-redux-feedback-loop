@@ -8,17 +8,13 @@ function Feeling() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const handleNavtoUnderstanding = () => {
-    history.push('/understanding');
-  };
-
   const submitFeeling = (event) => {
     event.preventDefault();
     dispatch({
       type: 'FEELING_ADD',
-      payload: [inputFeeling],
+      payload: inputFeeling,
     });
-    setInputFeeling('');
+    history.push('/understanding');
   };
 
   const handlefeeling = (event) => {
@@ -28,18 +24,18 @@ function Feeling() {
   return (
     <div>
       <h1>How are you felling today?</h1>
-      <form onSubmit={submitFeeling}>
-        <label>Feeling?</label>
-        <input
-          type="number"
-          placeholder="1-5"
-          onChange={handlefeeling}
-          value={inputFeeling}
-        />
-        <button type="submit" onClick={handleNavtoUnderstanding}>
-          NEXT
-        </button>
-      </form>
+
+      <label>Feeling?</label>
+      <input
+        type="number"
+        min="1"
+        max="5"
+        placeholder="1 to 5"
+        onChange={handlefeeling}
+      />
+      <button type="submit" onClick={submitFeeling}>
+        NEXT
+      </button>
     </div>
   );
 }

@@ -7,3 +7,7 @@ body {
 ul {
   list-style: none;
 }
+
+input {
+  width: 50px;
+}
