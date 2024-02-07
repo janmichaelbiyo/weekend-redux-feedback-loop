@@ -11,3 +11,7 @@ ul {
 input {
   width: 50px;
 }
+
+.comment {
+  width: 300px;
+}

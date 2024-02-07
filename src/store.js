@@ -22,11 +22,19 @@ const support = (state = 1, action) => {
   return state;
 };
 
+const comment = (state = '', action) => {
+  if (action.type === 'COMMENT_ADD') {
+    return action.payload;
+  }
+  return state;
+};
+
 const store = createStore(
   combineReducers({
     feeling,
     understanding,
     support,
+    comment,
   }),
   applyMiddleware(logger)
 );

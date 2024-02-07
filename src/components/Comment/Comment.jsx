@@ -1,21 +1,35 @@
 import React from 'react';
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 function Comment() {
+  const [inputComment, setInputComment] = useState('');
   const history = useHistory();
-  const handleNavtoReview = () => {
+  const dispatch = useDispatch();
+
+  const submitComment = (event) => {
+    event.preventDefault();
+    dispatch({
+      type: 'COMMENT_ADD',
+      payload: inputComment,
+    });
     history.push('/review');
   };
+
+  const handleComment = (event) => {
+    setInputComment(event.target.value);
+  };
+
   return (
     <div>
       <h1>Any comments you want to leave?</h1>
-      <form>
-        <label>Comments</label>
-        <input />
-        <button type="submit" onClick={handleNavtoReview}>
-          NEXT
-        </button>
-      </form>
+
+      <label>Comments: </label>
+      <input class="comment" type="text" onChange={handleComment} />
+      <button type="submit" onClick={submitComment}>
+        NEXT
+      </button>
     </div>
   );
 }
