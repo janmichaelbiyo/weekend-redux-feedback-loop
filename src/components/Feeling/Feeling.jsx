@@ -25,7 +25,6 @@ function Feeling() {
     <div>
       <h1>How are you felling today?</h1>
 
-      <label>Feeling?</label>
       <input
         type="number"
         min="1"

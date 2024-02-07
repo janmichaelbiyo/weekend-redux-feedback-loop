@@ -25,8 +25,6 @@ function Support() {
     <div>
       <h1>How well are you being supported?</h1>
 
-      <label>Support?</label>
-
       <input
         type="number"
         min="1"

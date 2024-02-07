@@ -25,7 +25,6 @@ function Comment() {
     <div>
       <h1>Any comments you want to leave?</h1>
 
-      <label>Comments: </label>
       <input class="comment" type="text" onChange={handleComment} />
       <button type="submit" onClick={submitComment}>
         NEXT
