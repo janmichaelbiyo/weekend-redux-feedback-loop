@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { postFeedback } from '../FeedbackAPI/feedback.api';
 
 function Review() {
   const feeling = useSelector((state) => state.feeling);
@@ -9,8 +10,16 @@ function Review() {
   const comment = useSelector((state) => state.comment);
 
   const history = useHistory();
-  const handleNavtoSubmission = () => {
-    history.push('/submission');
+  const submitSubmission = (event) => {
+    event.preventDefault();
+
+    postFeedback({ feeling, understanding, support, comment })
+      .then((response) => {
+        history.push('/submission');
+      })
+      .catch((error) => {
+        console.log('SOS at the post', error);
+      });
   };
   return (
     <div>
@@ -20,7 +29,7 @@ function Review() {
         <li>Understanding: {understanding}</li>
         <li>Support: {support}</li>
         <li>Comments: {comment}</li>
-        <button onClick={handleNavtoSubmission}>SUBMIT</button>
+        <button onClick={submitSubmission}>SUBMIT</button>
       </ul>
     </div>
   );
