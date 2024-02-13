@@ -10,7 +10,9 @@ function Submission() {
     <div>
       <h4> Thank You! </h4>
 
-      <button onClick={handleNavtoStart}>Leave New Feedback</button>
+      <button data-testid="next" onClick={handleNavtoStart}>
+        Leave New Feedback
+      </button>
     </div>
   );
 }

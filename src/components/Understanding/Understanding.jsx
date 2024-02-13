@@ -26,13 +26,14 @@ function Understading() {
       <h1>How well are you understanding the content? </h1>
 
       <input
+        data-testid="input"
         type="number"
         min="1"
         max="5"
         placeholder="1 to 5"
         onChange={handleUnderstanding}
       />
-      <button type="submit" onClick={submitUnderstanding}>
+      <button data-testid="next" type="submit" onClick={submitUnderstanding}>
         NEXT
       </button>
     </div>

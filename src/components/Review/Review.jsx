@@ -29,7 +29,9 @@ function Review() {
         <li>Understanding: {understanding}</li>
         <li>Support: {support}</li>
         <li>Comments: {comment}</li>
-        <button onClick={submitSubmission}>SUBMIT</button>
+        <button data-testid="next" onClick={submitSubmission}>
+          SUBMIT
+        </button>
       </ul>
     </div>
   );

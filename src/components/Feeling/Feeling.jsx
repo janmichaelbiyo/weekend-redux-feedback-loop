@@ -26,13 +26,14 @@ function Feeling() {
       <h1>How are you felling today?</h1>
 
       <input
+        data-testid="input"
         type="number"
         min="1"
         max="5"
         placeholder="1 to 5"
         onChange={handlefeeling}
       />
-      <button type="submit" onClick={submitFeeling}>
+      <button data-testid="next" type="submit" onClick={submitFeeling}>
         NEXT
       </button>
     </div>

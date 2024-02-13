@@ -25,8 +25,13 @@ function Comment() {
     <div>
       <h1>Any comments you want to leave?</h1>
 
-      <input id="comment" type="text" onChange={handleComment}></input>
-      <button type="submit" onClick={submitComment}>
+      <input
+        data-testid="input"
+        id="comment"
+        type="text"
+        onChange={handleComment}
+      ></input>
+      <button data-testid="next" type="submit" onClick={submitComment}>
         NEXT
       </button>
     </div>

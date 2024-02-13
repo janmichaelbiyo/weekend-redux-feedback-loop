@@ -26,13 +26,14 @@ function Support() {
       <h1>How well are you being supported?</h1>
 
       <input
+        data-testid="input"
         type="number"
         min="1"
         max="5"
         placeholder="1 to 5"
         onChange={handleSupport}
       />
-      <button type="submit" onClick={submitSupport}>
+      <button data-testid="next" type="submit" onClick={submitSupport}>
         NEXT
       </button>
     </div>
