@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-function Submission() {
+function ThankYou() {
   const history = useHistory();
   const handleNavtoStart = () => {
     history.push('/');
@@ -17,4 +17,4 @@ function Submission() {
   );
 }
 
-export default Submission;
+export default ThankYou;

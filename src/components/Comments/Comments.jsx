@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-function Comment() {
+function Comments() {
   const [inputComment, setInputComment] = useState('');
   const history = useHistory();
   const dispatch = useDispatch();
@@ -38,4 +38,4 @@ function Comment() {
   );
 }
 
-export default Comment;
+export default Comments;

@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger';
 
-function feeling(state = 1, action) {
+const feeling = (state = 1, action) => {
   if (action.type === 'FEELING_ADD') {
     return action.payload;
   }
   return state;
-}
+};
 
 function understanding(state = 1, action) {
   if (action.type === 'UNDERSTANDING_ADD') {

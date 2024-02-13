@@ -15,7 +15,7 @@ function Review() {
 
     postFeedback({ feeling, understanding, support, comment })
       .then((response) => {
-        history.push('/submission');
+        history.push('/thankyou');
       })
       .catch((error) => {
         console.log('SOS at the post', error);

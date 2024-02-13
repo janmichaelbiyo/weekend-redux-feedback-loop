@@ -14,7 +14,7 @@ function Support() {
       type: 'SUPPORT_ADD',
       payload: inputSupport,
     });
-    history.push('/comment');
+    history.push('/comments');
   };
 
   const handleSupport = (event) => {
