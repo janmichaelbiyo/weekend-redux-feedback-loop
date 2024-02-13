@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -23,7 +22,7 @@ function Feeling() {
 
   return (
     <div>
-      <h1>How are you felling today?</h1>
+      <h2>How are you felling today?</h2>
 
       <input
         data-testid="input"
@@ -32,8 +31,8 @@ function Feeling() {
         max="5"
         placeholder="1 to 5"
         onChange={handlefeeling}
-      />
-      <button data-testid="next" type="submit" onClick={submitFeeling}>
+      ></input>
+      <button data-testid="next" onClick={submitFeeling}>
         NEXT
       </button>
     </div>

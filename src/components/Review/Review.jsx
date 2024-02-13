@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { postFeedback } from '../FeedbackAPI/feedback.api';
+import { postFeedback } from '../../FeedbackAPI/feedback.api';
 
 function Review() {
   const feeling = useSelector((state) => state.feeling);
@@ -26,9 +26,13 @@ function Review() {
       <h1>Review Your Feedback</h1>
       <ul>
         <li>Feeling: {feeling}</li>
+
         <li>Understanding: {understanding}</li>
+
         <li>Support: {support}</li>
+
         <li>Comments: {comments}</li>
+
         <button data-testid="next" onClick={submitSubmission}>
           SUBMIT
         </button>
