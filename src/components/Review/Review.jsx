@@ -7,13 +7,13 @@ function Review() {
   const feeling = useSelector((state) => state.feeling);
   const understanding = useSelector((state) => state.understanding);
   const support = useSelector((state) => state.support);
-  const comment = useSelector((state) => state.comment);
+  const comments = useSelector((state) => state.comments);
 
   const history = useHistory();
   const submitSubmission = (event) => {
     event.preventDefault();
 
-    postFeedback({ feeling, understanding, support, comment })
+    postFeedback({ feeling, understanding, support, comments })
       .then((response) => {
         history.push('/thankyou');
       })
@@ -28,7 +28,7 @@ function Review() {
         <li>Feeling: {feeling}</li>
         <li>Understanding: {understanding}</li>
         <li>Support: {support}</li>
-        <li>Comments: {comment}</li>
+        <li>Comments: {comments}</li>
         <button data-testid="next" onClick={submitSubmission}>
           SUBMIT
         </button>

@@ -22,7 +22,7 @@ function support(state = 1, action) {
   return state;
 }
 
-function comment(state = '', action) {
+function comments(state = '', action) {
   if (action.type === 'COMMENT_ADD') {
     return action.payload;
   }
@@ -34,7 +34,7 @@ const store = createStore(
     feeling,
     understanding,
     support,
-    comment,
+    comments,
   }),
   applyMiddleware(logger)
 );
